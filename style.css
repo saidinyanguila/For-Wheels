@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+:root {
+    --color-1: rgb(83, 125, 93);
+    --color-2: rgb(115, 148, 107);
+    --color-3: rgb(158, 188, 138);
+    --color-4: rgb(210, 208, 160);   
+}
+body {
+    position: relative;
+}
+.header-container .signature {
+    background-color: var(--color-1);
+    padding: 4px 16px;
+    text-align: right;
+}
+.signature a {
+    margin-right: 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.signature a i {
+    margin-right: 5px;
+}
+.header-container .site-header {
+    background-color: var(--color-3);
+    padding: 22px 32px;display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-section a {
+    text-decoration: none;
+}
+.logo-section a h2, h2.logo {
+    font-size: 45px;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    margin-bottom: -12px;
+}
+.header-links ul {
+    list-style-type: none;
+}
+.header-links ul li {
+    display: inline;
+    margin: 0 25px 0 0;
+    position: relative;
+}
+.header-links ul li:hover a {
+    color: rgb(200, 200, 200);
+}
+.header-links ul li a {
+    text-decoration: none;
+    font-size: 17px;
+}
+.slider-wrapper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.slider {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-3);
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.slide.active {
+    opacity: 1;
+}
+.slide .slide_content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+.slide .slide_content h1 {
+    font-weight: 300;
+}
+.slide .slide_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.side_buttons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.side_buttons button{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 50px;
+    height: 180px;
+    opacity: 0;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: .5s;
+}
+.slider-wrapper:hover .side_buttons button {
+    opacity: 1;
+}
+.side_buttons button#leftBtn {
+    left: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.side_buttons button#rightBtn {
+    right: 10px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.slider_footer {
+    position: relative;
+    height: 100px;
+    background-color: #fff;
+}
+.slider_footer .slider_footer_content {
+    background-color: var(--color-1);
+    position: absolute;
+    width: 93%;
+    top: -50px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    border-radius: 20px;
+    padding: 20px 25px;
+}
+h2.logo {
+    font-size: 30px;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    margin-bottom: -12px;
+}
+.slider_navs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_navs .slider_nav {
+    width: 150px;
+    height: 75px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 10px;
+    border: 3px solid transparent;
+    transition: .5s;
+    cursor: pointer;
+}
+.slider_navs .slider_nav.active {
+    border: 3px solid var(--color-4);
+}
+.slider_navs .slider_nav img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.welcome {
+    min-height: 650px;
+    padding: 145px 25px 20px 25px;
+    background-color: var(--color-2);
+}
+.welcome h1, .filter h1 {
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    margin: 18px 0;
+}
+.welcome h1::after {
+    content: '';
+    position: absolute;
+    background-color: whitesmoke;
+    left: 2px;
+    bottom: -5px;
+    width: 120px;
+    height: 3px;
+}
+.welcome p {
+    font-weight: 500;
+}
+.reservations {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 35px 0 20px 0;
+}
+.reservations .card {
+    width: 350px;
+    height: 300px;
+    overflow: hidden;
+    background-color: var(--color-4);
+    margin: 0 20px;
+    transition: .6s;
+}
+.reservations .card:hover {
+    height: 450px;
+}
+.card h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+.card .thumb {
+    padding: 6px 8px;
+    height: 200px;
+}
+.thumb img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.rental_options {
+    margin: 10px 0;
+    padding: 0 9px;
+}
+.rental_options ul {
+    list-style-type: none;
+}
+.rental_options ul li {
+    display: inline;
+    background-color: var(--color-2);
+    margin: 0 8px 0 0;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-style: italic;
+}
+li#popular {
+    background-color: red;
+}
+.avg_reviews {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 3px 8px;
+}
+.avg_reviews p {
+    margin-right: 10px;
+}
+.avg_reviews .stars i {
+    color: yellow;
+    font-style: italic;
+}
+.filter {
+    min-height: 100vh;
+    padding: 18px;
+}
+.filter h1 {
+    color: black;
+}
+.filter h1::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    left: 2px;
+    bottom: -5px;
+    width: 60px;
+    height: 3px;
+}
+.filter p {
+    color: black;
+}
+.filter_input {
+    margin: 20px auto;
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--color-2);
+    display: flex;
+    align-items: center;
+}
+.filter_input div {
+    margin-right: 20px;
+}
+.filter_input select {
+    padding: 4px 14px;
+    color: black;
+    border-radius: 24px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.filter_input select option {
+    color: black;
+}
+.filter_submit button {
+    background-color: #fff;
+    padding: 6px 18px;
+    color: black;
+    border-radius: 24px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.filter_output {
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+.filter_output h2 {
+    color: black;
+}
+
+.filter_results {
+    display: grid;
+    padding: 8px 5px;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 18%;
+    grid-template-rows: 300px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+.filter_results .result {
+    background-color: var(--color-3);
+    padding: 1rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2), -1px -1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+.filter_results .result:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6), -1px -1px 4px rgba(0, 0, 0, 0.6);
+}
+.snap-inline {
+    scroll-snap-type: inline mandatory;
+}
+.snap-inline > * {
+    scroll-snap-align: start;
+    scroll-padding-inline: 1rem;
+}
+
+.result .image{
+    margin-bottom: 15px;
+}
+.result .image img{
+    inline-size: 100%;
+    height: 150px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.result .result-title h2 {
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: -7px;
+}
+.result ul {
+    margin: 8px 0 13px 0;
+    list-style-type: none;
+}
+.result ul li {
+    display: inline;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-style: italic;
+    font-size: 13px;
+}
+.result .stars i {
+    color: yellow;
+    font-style: italic;
+    font-size: 14px;
+}
+footer {
+    background-color: var(--color-2);
+    padding: 50px 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+footer div {
+    text-align: center;
+    margin: 0 50px;
+}
+footer h2 {
+    margin: 8px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+footer ul {
+    list-style-type: none;
+}
+footer ul li {
+    display: inline;
+    margin: 4px 6px;
+    font-size: 12px;
+}
+footer ul li a {
+    text-decoration: none;
+}

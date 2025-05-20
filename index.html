@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Wheels | Car Rental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let start = Date.now();
+
+        document.addEventListener('DOMContentLoaded', init);
+        window.addEventListener('load', load);
+
+        function load() {
+            console.log(`loaded at ${Date.now() - start} ms`);
+        }
+        function init() {
+            console.log(`DOM Loaded at ${Date.now() - start} ms`);
+        }
+    </script>
+</head>
+<body>
+    <header class="header-container">
+        <nav class="signature">
+            <div class="contact-me">
+                <a href="mailto:saidinyanguila@gmail.com"><i class="fa-solid fa-envelope"></i> saidinyanguila@gmail.com</a>
+                <a href=""><i class="fa-solid fa-phone"></i>063 127 9303</a>
+            </div>
+        </nav>
+
+        <div class="site-header">
+            <div class="logo-section">
+                <a href="">
+                    <h2>For Wheels</h2>
+                    <small>Affordable cars, ready for you</small>
+                </a>
+            </div>
+
+            <nav class="header-links">
+                <ul class="">
+                    <li id="vehicles_link"><a href="#">Vehicles</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slide active">
+                <img src="Media/Slider/slide_1.jpg" alt="" class="slide_bg">
+                <div class="slide_content">
+                    <h1>SA's number 1 car rental company</h1>
+                    <p>Trusted by many</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Media/Slider/slide_2.jpg" alt="" class="slide_bg">
+                <div class="slide_content">
+                    <h1>Get Quality cars at affordable prices</h1>
+                    <p>Best prices you can find</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Media/Slider/slide_3.jpg" alt="" class="slide_bg">
+                <div class="slide_content">
+                    <h1>Decide you rental duration</h1>
+                    <p>if daily, weekly or monthly is not convinient for you, set up your own duration</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Media/Slider/slide_4.jpg" alt="" class="slide_bg">
+                <div class="slide_content">
+                    <h1>No insurance required!</h1>
+                    <p>Don't have insurance? No problem</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="side_buttons">
+            <button onclick="sideNav(-1)" id="leftBtn">&#10094;</button>
+            <button onclick="sideNav(1)" id="rightBtn">&#10095;</button>
+        </div>
+
+        <div class="slider_footer">
+            <div class="slider_footer_content">
+                <h2 class="logo" style="text-align: center;">For Wheels</h2>
+
+                <div class="slider_navs">
+                    <div class="slider_nav active" onclick="manualNav(0)"><img src="Media/Slider/slide_1.jpg" alt=""></div>
+                    <div class="slider_nav" onclick="manualNav(1)"><img src="Media/Slider/slide_2.jpg" alt=""></div>
+                    <div class="slider_nav" onclick="manualNav(2)"><img src="Media/Slider/slide_3.jpg" alt=""></div>
+                    <div class="slider_nav" onclick="manualNav(3)"><img src="Media/Slider/slide_4.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="welcome">
+        <h1>Start renting today</h1>
+        <p>Chose from our wide randge of high value cars at the most affordable prices.</p>
+
+        <div class="reservations">
+            <div class="card">
+                <h2 class="card_title">Eco-friendly</h2>
+                <div class="thumb"><img src="Media/eco.jpg" alt=""></div>
+                
+                <div class="rental_options">
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li>Weekly</li>
+                        <li>Daily</li>
+                    </ul>
+                </div>
+
+                <div class="avg_reviews">
+                    <p>Average Reviews - </p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card_title">Family Car</h2>
+                <div class="thumb"><img src="Media/family.jpg" alt=""></div>
+
+                <div class="rental_options">
+                    <ul>
+                        <li>Weekly</li>
+                        <li>Daily</li>
+                        <li>Montly</li>
+                    </ul>
+                </div>
+
+                <div class="avg_reviews">
+                    <p>Average Reviews - </p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card_title">Luxury</h2>
+                <div class="thumb"><img src="Media/luxury.jpg" alt=""></div>
+
+                <div class="rental_options">
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li>Weekly</li>
+                        <li>Daily</li>
+                    </ul>
+                </div>
+
+                <div class="avg_reviews">
+                    <p>Average Reviews - </p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="filter">
+        <h1>Filter</h1>
+        <p>Enter your requirements and find the best car for you.</p>
+
+        <div class="filter_input">
+            <div class="make">
+                <label for="make">Manufacturer: </label>
+                <select name="make" id="make">
+                    <option value="All">All</option>
+                </select>
+            </div>
+            
+            <div class="start_date">
+                <label for="s_date">Start renting on: </label>
+                <select name="s_date" id="s_date">
+                </select>
+
+                <select name="s_month" id="s_month">
+                </select>
+
+                <select name="s_year" id="s_year">
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+
+            <div class="duration">
+                <label for="duration">Rent duration</label>
+                <select name="duration" id="duration">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </div>
+
+            <div class="pick_up-point">
+                <label for="p_point">Pick up Point</label>
+                <select name="p_point" id="p_point">
+                    <option value="cpt">Cape Town</option>
+                    <option value="wynberg">Wynberg</option>
+                    <option value="fishhook">Fish Hoek</option>
+                </select>
+            </div>
+
+            <div class="filter_submit">
+                <button>Filter</button>
+            </div>
+        </div>
+
+        <div class="filter_output">
+            <h2>Results</h2>
+
+            <div class="filter_results snap-inline">
+                <div class="result">
+                    <div class="image"><img src="Media/luxury.jpg" alt=""></div>
+                    <div class="result-title"><h2>Rolls-Royce Ghost</h2></div>
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li style="background-color: blueviolet;">Luxury</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(65 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/family.jpg" alt=""></div>
+                    <div class="result-title"><h2>Toyota RAV4</h2></div>
+                    <ul>
+                        <li style="background-color: lightseagreen;">Family</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <small>(25 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/tesla.jpg" alt=""></div>
+                    <div class="result-title"><h2>Tesla Model 3</h2></div>
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li style="background-color: greenyellow;">Eco-friendly</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(107 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/audi.jpg" alt=""></div>
+                    <div class="result-title"><h2>Audi RS6</h2></div>
+                    <ul>
+                        <li style="background-color: red;">Popular</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(55 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/mustang.jpg" alt=""></div>
+                    <div class="result-title"><h2>Ford Mustang 2025</h2></div>
+                    <ul>
+                        <li style="background-color: blueviolet;">Luxury</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(34 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/luxury.jpg" alt=""></div>
+                    <div class="result-title"><h2>Rolls-Royce Ghost</h2></div>
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li style="background-color: blueviolet;">Luxury</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(65 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/family.jpg" alt=""></div>
+                    <div class="result-title"><h2>Toyota RAV4</h2></div>
+                    <ul>
+                        <li style="background-color: lightseagreen;">Family</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <small>(25 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/tesla.jpg" alt=""></div>
+                    <div class="result-title"><h2>Tesla Model 3</h2></div>
+                    <ul>
+                        <li id="popular">Popular</li>
+                        <li style="background-color: greenyellow;">Eco-friendly</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(107 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/audi.jpg" alt=""></div>
+                    <div class="result-title"><h2>Audi RS6</h2></div>
+                    <ul>
+                        <li style="background-color: red;">Popular</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(55 Reviews)</small>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="image"><img src="Media/mustang.jpg" alt=""></div>
+                    <div class="result-title"><h2>Ford Mustang 2025</h2></div>
+                    <ul>
+                        <li style="background-color: blueviolet;">Luxury</li>
+                    </ul>
+
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <small>(34 Reviews)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="site-map">
+            <h2>Sitemap</h2>
+
+            <ul class="">
+                <li id="vehicles_link"><a href="#">Vehicles</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <h2>Follow us</h2>
+
+            <ul class="">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-x-twitter"></i></li>
+            </ul>
+        </div>
+
+        <div class="visit">
+            <h2>Visit us</h2>
+
+            <ul class="">
+                <li>Cape Town</li>
+                <li>Wynberg</li>
+                <li>Fish Hoek</li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="index.js"></script>
+    <script src="filter.js"></script>
+</body>
+</html>
